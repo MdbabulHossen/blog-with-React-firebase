@@ -1,0 +1,23 @@
+
+.wraper_create_post{
+    display: flex;
+    justify-content: center;
+}
+.create_input{
+    width: 100%;
+    margin-top: 15px;
+}
+
+.create_input input{
+  
+    max-width: 700px;
+}
+
+.create_post{
+    padding:20px 40px;
+    background-color:rgb(238, 84, 18);
+    max-width:800px;
+    margin-top:30px;
+    border-radius: 15px;
+ 
+}

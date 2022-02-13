@@ -1,0 +1,55 @@
+.wrape-registerPage{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+}
+
+.registerPage{
+    padding:20px 40px;
+    background-color:rgb(154,5,156);
+    max-width:800px;
+    margin-top:30px;
+    border-radius: 15px;
+ 
+}
+
+.register-content{
+    display:flex;
+    justify-content:center;
+    margin-top:30px;
+  
+}
+
+
+.input-div{
+    display:flex;
+    justify-content:center;
+    margin-top:19px;
+}
+
+.input-div input{
+    max-width:500px
+}
+
+.input-btn{
+    
+display: flex;
+justify-content: center;
+margin-top: 20px;
+margin-bottom: 10px;
+}
+
+.input-btn button{
+    background-color:rgb(154,5,156);
+    border:solid 3px white;
+    color:white;
+    font-size: 17px;
+    border-radius: 10px;
+    font-weight:500;
+}
+
+.input-btn button:hover{
+    background-color: rgb(255, 251, 251);
+    color: rgb(154,5,156);
+}
