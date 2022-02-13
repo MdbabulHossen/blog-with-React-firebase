@@ -47,7 +47,7 @@ export default function Posts() {
       {
           posts.map((post,index)=>(
               
-            <div className="col-lg-4 col-md-6 mt-20"> 
+            <div className="col-lg-4 col-md-6 mt-20" key={index}> 
             <div class="container-fluid" id="card">
               <div className="card text-white) ">
                <img src="https://source.unsplash.com/random/200x200?sig=1" style={{height:"200px"}}  />
