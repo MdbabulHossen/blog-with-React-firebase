@@ -1,0 +1,40 @@
+.footer{
+    background-color: black;
+    padding-top: 50px;
+    margin-top: 100px;
+}
+
+.frist-content h5{
+    color: rgb(141, 8, 153);
+    display: flex;
+    justify-content: center;
+}
+
+
+.nav{
+    display: flex;
+    justify-content: center;
+}
+.nav ul li{
+    list-style: none;
+    color: rgba(255, 254, 254, 0.616);
+}
+.nav ul li:hover{
+    
+    color: rgb(155, 7, 168);
+}
+
+
+
+
+.last-footer{
+    padding: 20px;
+    margin-top: 50px;
+}
+.last-footer p{
+    color: rgb(192, 186, 192);
+    display: flex;
+    justify-content: center;
+   
+    
+}

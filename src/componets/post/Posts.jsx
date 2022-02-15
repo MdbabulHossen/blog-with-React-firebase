@@ -2,11 +2,12 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { db} from '../../firebase-config';
-import {getDocs,collection} from 'firebase/firestore'
+import {getDocs,collection,deleteDoc,doc} from 'firebase/firestore'
 import './Post.css'
+import {useNavigate,Link} from 'react-router-dom'
 
 export default function Posts() {
-
+  const Navigate=useNavigate()
   const [posts,setPosts]=useState([]);
 
   const postsCollectionRef=collection(db,"post")
@@ -19,7 +20,12 @@ export default function Posts() {
       fetchdata();
   },[])
 
-
+const deletePost=(id)=>{
+     const userDoc=doc(db,"post",id)
+      deleteDoc(userDoc)
+      Navigate("/");
+      Navigate("/post")
+}
 
   return <>
   <div className="container">
@@ -52,11 +58,12 @@ export default function Posts() {
               <div className="card text-white) ">
                <img src="https://source.unsplash.com/random/200x200?sig=1" style={{height:"200px"}}  />
                   <div className="card-body">
-                      <p style={{fontSize:"12px",color:"white"}}>{new Date().toDateString()}</p>
+                      <p style={{fontSize:"12px",color:"gray"}}>{new Date().toDateString()}</p>
                         <h4 className="card_head">{post.title}</h4>
                           <p className="card_text">{post.desc}</p> 
-                            <p style={{fontSize:"13px",color:"white"}}>author:  {post.author}</p>
-                               <button className='btn btn-primary'>view more..</button>
+                            <p style={{fontSize:"13px",color:"gray"}}>author:  {post.author}</p>
+                               <Link to={`singlepost/${post.id}`}><button className='btn btn-primary' >view more..</button></Link>
+                               <button className='btn btn-danger ml-1' onClick={()=>{deletePost(post.id)}}>Delete Post</button>
                           
                   </div>
                </div>                 

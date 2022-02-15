@@ -1,5 +1,10 @@
-.navbar{
-    background-color: rgb(238,84,18);
+.navbar img{
+    width: 150px;
+    image-rendering:auto;
+}
+
+.main-navbar{
+    background-color: rgb(154,5,156);
 }
 .collapse{
     display: flex;
@@ -10,11 +15,6 @@
 .navbar-nav li{
     padding-left: 20px;
     margin-top: 12px;
+    color: rgb(255, 255, 255);
 }
-.navbar-link {
-    color: black;
-}
-.navbar-link:hover{
-    color: #000;
-    text-decoration: none;
-}
+

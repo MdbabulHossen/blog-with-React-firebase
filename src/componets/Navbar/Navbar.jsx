@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useUserContex } from '../../contex/UserContex';
 import './navbar.css'
+import logo from '../images/logo.png'
 
 export default function Navbar() {
   const {logoutUser,setUser}=useUserContex();
@@ -12,16 +13,19 @@ export default function Navbar() {
  const{user}=useUserContex();
 
   return <>
-  
+<div className="main-navbar">
 
-  <nav className="navbar navbar-expand-lg navbar-light bg-light ">
-  <p>Navbar</p>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+
+<div className="container">
+
+  <nav className="navbar navbar-expand-lg navbar-light  ">
+  <img src={logo} alt="logo" />
+  <button className="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span className="navbar-toggler-icon "></span>
   </button>
   <div className="collapse navbar-collapse" id="navbarNav">
 
-    <ul class="navbar-nav">
+    <ul className="navbar-nav">
     <Link to={"/"} className='nav-link active'><li>Home</li></Link>
     <Link to={"/create"}className='nav-link'><li>Create Post</li></Link>
     <Link to={"/post"} className='nav-link'><li style={{paddingRight:"15px"}}>Posts</li></Link>
@@ -45,8 +49,9 @@ export default function Navbar() {
   </div>
 </nav>
   
-  
-
+   
+</div> 
+</div>
   
   </>;
 }

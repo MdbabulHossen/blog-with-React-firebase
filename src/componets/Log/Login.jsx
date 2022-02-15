@@ -1,14 +1,14 @@
 import React from 'react';
 import { useRef } from 'react';
-import { Link, useNavigate} from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import { useUserContex } from '../../contex/UserContex';
 import Error from '../ErrorAndLoading/Error';
 
 
 export default function Login() {
-  const Navigate=useNavigate();
+
   
-    const {loginUser,error,setUser} =useUserContex();
+    const {loginUser,error,user,setUser} =useUserContex();
     const emailRef=useRef();
     const passwordRef=useRef()
    
@@ -18,8 +18,7 @@ export default function Login() {
     const  email=emailRef.current.value;
     const password=passwordRef.current.value;
        loginUser(email,password);
-        setUser(true)
-         Navigate("/")
+      
         
          
     }
@@ -33,7 +32,13 @@ export default function Login() {
       <div className="register-content " >
        <h3 style={{color:"white"}}>LogIn Your Account</h3>
       </div>
+
       {error && <Error />}
+      {user && ( <div class="alert alert-success" role="alert">
+             LogIn successfully!
+              </div>)}
+
+
       <form onSubmit={submitHandle}>
     
        <div className="input-div">

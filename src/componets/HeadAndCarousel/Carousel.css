@@ -1,0 +1,11 @@
+
+
+
+
+.carousel-item-three{
+    background-image: url('../images/photo-1542831371-29b0f74f9713.jfif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+}

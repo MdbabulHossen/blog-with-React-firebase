@@ -1,0 +1,41 @@
+
+.writePostSec{
+    background-color: rgb(242,226,213);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.write-post-content{
+    margin-top: 70px;
+}
+.write-post-content h2{ 
+    font-family: 'Roboto', sans-serif;
+   
+}
+
+
+
+
+
+
+
+/* for contact me  */
+
+
+.contactme{
+    margin-top: 20px;
+    padding-top: 50px;
+    background-color: antiquewhite;
+    padding-bottom: 50px;
+}
+
+.contact-title{
+    display: flex;
+    justify-content: center;
+
+}
+
+
+.social-profile i{
+font-size: 40px;
+}
+

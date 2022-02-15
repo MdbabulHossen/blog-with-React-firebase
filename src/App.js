@@ -8,10 +8,13 @@ import Login from "./componets/Log/Login";
 import Register from "./componets/Log/Register";
 import { useUserContex } from "./contex/UserContex";
 import './App.css'
+import Footer from "./componets/footer/Footer";
+import SinglePost from "./componets/post/SinglePost";
 function App() {
   
  const{user}=useUserContex()
 
+ 
   return (
    <> 
   
@@ -23,7 +26,8 @@ function App() {
      <Route path={"/post"} element={<Posts />} />
      <Route path ={"/login"} element={<Login />} />
      <Route path ={"/register"} element={<Register />} />
-    
+     <Route path={"singlepost/:id"} element ={<SinglePost />} />
+     
    <Route path="/*" element={<PrivetOutlet user={user}/>}>
    <Route path="create" element={<CreatePost />}/>
    </Route>
@@ -33,6 +37,7 @@ function App() {
 
 
    </Routes>
+   <Footer />
    </BrowserRouter>
 
    </>

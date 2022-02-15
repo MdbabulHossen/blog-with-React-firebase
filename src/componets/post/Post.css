@@ -1,23 +1,25 @@
 .post_titile{
     display: flex;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 70px;
     margin-bottom: 30px;
 }
 
 .filter-button{
   margin-bottom: 30px;
+  margin-top: 50px;
 }
 
 .card{
    
-    box-shadow: 0px 0px 8px 0px black;   
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.404);   
     box-sizing: border-box;
     border-radius: 8px;
     padding-top: 0px;
     height: 100%;
-    background-color: rgb(12, 116, 67);    
+   
 }
+
 #card.container-fluid {padding-top: 20px;}
 
 .post_content{
@@ -29,12 +31,34 @@
     display: -webkit-box;
     -webkit-line-clamp: 2; /* number of lines to show */
     -webkit-box-orient: vertical;
-    color:white
+    color:rgba(0, 0, 0, 0.644)
     
 }
 
+
 .card_head{
-    font-size: 21px;
-    color:white
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-box-orient: vertical;
+    
 }
 
+
+
+
+
+.wrapMainSinglePost{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.singlePost{
+    margin-top: 55px;
+}
+
+.authorb{
+    margin-top: -20px;
+}
